@@ -24,7 +24,6 @@ const countSmaller2 = function (nums) {
     newNums.sort(function (i1, i2) {
         return i1 - i2
     });
-
     let res = [];
     for (let i = 0; i < nums.length; ++i) {
         let seq = newNums.indexOf(nums[i]);

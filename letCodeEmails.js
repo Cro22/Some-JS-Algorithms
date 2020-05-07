@@ -7,8 +7,9 @@ function ValidateEmail(mail) {
         if (search > -1) {
             const firstPart = mail[i].slice(0, search);
             const secondPart = mail[i].substr(search + 1)
-
-            validSecond(secondPart) && validateFirst(firstPart) ? emails.push(validateFirst(firstPart) + '@' + secondPart) : ''
+            const vfirstPart = validateFirst(firstPart)
+            const vsecondPart = validSecond(secondPart)
+            vsecondPart && vfirstPart ? emails.push(vfirstPart + '@' + secondPart) : ''
             emails.length ? emails = emails.filter((el, index) => emails.indexOf(el) === index) : ''
         }
     }
