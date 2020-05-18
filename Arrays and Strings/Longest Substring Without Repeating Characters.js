@@ -16,3 +16,5 @@ const longestSubstr = function (s) {
     }
     return res;
 }
+
+console.log(longestSubstr('ccaabbb'))
